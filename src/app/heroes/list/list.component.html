@@ -1,0 +1,9 @@
+<h3> Hero List</h3>
+<div>
+   <h3 *ngIf="dropedHero" class="mx-2"> Daleted Name:</h3>
+</div>
+<h3 >{{dropedHero}}</h3>
+<button (click)="dropLastHero()" class="btn btn-warning">Drop last hero</button>
+<ol class="list-group">
+  <li class="list-group-item" *ngFor="let hero of superHeroes  "> <strong>{{hero}}</strong> </li>
+</ol>
