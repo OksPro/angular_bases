@@ -12,10 +12,10 @@ export class ListComponent {
   public characterList: Character[] = []
 
   @Output()
-  public itemToDelete: EventEmitter<number> = new EventEmitter();
+  public itemToDelete: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter(index: number):void{
-    console.log('Id o incice mandadao.' + index)
-    this.itemToDelete.emit(index)
+  onDeleteCharacter(id?: string):void{
+    if(!id)return;
+    this.itemToDelete.emit(id)
   }
 }
